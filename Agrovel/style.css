@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -37,6 +41,10 @@ img {
 
 /* ================== BASE =================*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font: 400 1rem 'DM Sans', sans-serif;
     color: var(--text-color);
@@ -44,9 +52,14 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-    font: 700 1.875rem 'Poppins', sans-serif;
+.title {
+    font: 700 1.775rem 'Poppins', sans-serif;
     color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+
+main {
+    margin-top: 5rem;
 }
 
 /*================ BUTTON ===================== */
@@ -87,9 +100,20 @@ h1 {
 }
 
 .section {
-    padding: 1rem 0;
+    padding: 4rem 0;
 }
 
+.section .title {
+    margin-bottom: 1rem;
+}
+
+.section headder {
+    margin-bottom: 4rem;
+}
+
+.section header strong {
+    color: var(--base-color);
+}
 
 #header {
     border-bottom: 1px solid #e4e4e4;
@@ -103,7 +127,15 @@ h1 {
     z-index: 100;
     background-color: var(--body-color);
 
+    transition: 0.2s;
+
 }
+
+#header.scroll {
+    box-shadow: 0 0 12px  rgba(0, 0, 0, 0.4);
+}
+
+
 
 /* =================== LOGO =================== */
 .logo {
@@ -126,16 +158,107 @@ nav {
     width: 100%;
 
 }
+nav ul li {
+    text-align: center;
 
-main {
-    margin-top: 4.5rem;
+}
+
+nav ul li a {
+    transition: color 0.2s;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--base-color);
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--base-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+
+    transition: width 0.3s;
+}
+nav ul li a:hover::after {
+    width: 100%;
+
+}
+
+nav .menu ul {
+    display: none;
+}
+
+nav .menu {   /* Escondendo menu*/
+    opacity: 0;
+    visibility: hidden; /*impedindo o click*/
+    top: -20rem;
+    transition: 0.2s;
+
+}
+
+/* Mostrar menu */
+
+nav.show .menu {
+    display: grid;
+    place-content: center;
+
+    opacity: 1;
+    visibility: visible;
+
+    background-color: var(--body-color);
+
+    height: 100vh; /* viewport Height 100 --- toda a tela */
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+}
+
+nav.show .menu ul {
+    display: grid;
+}
+
+nav.show ul.grid {
+    gap: 2rem;
+}
+
+.toggle {
+    color: var(--base-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    right: 1.5rem;
+    top: -1.5rem;
+    transition: 0.2s;
+
+
+}
+
+nav.show .icon-close {
+    visibility: visible;
+    opacity: 1;
+    top: 1.5rem;
 }
 
 /*================ HOME ================ */
 
 #home {
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 #home .conteiner {
@@ -158,9 +281,8 @@ main {
 }
 
 #home .image img {
-    width: 12rem;
-    height: auto;
-    right: -2.93rem;
+    width: 14rem;
+    right: -4.5rem;
     position: relative;
 }
 
@@ -181,4 +303,70 @@ main {
 
 #home .text p {
     margin-bottom: 2rem;
+}
+
+/* =========== ABOUT ================ */
+
+#about .conteiner {
+    margin: 0;
+
+}
+
+#about .image {
+    position: relative;
+}
+
+#about .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: 0;
+}
+
+#about .image img {
+    width: 24rem;
+    right: 0rem;
+    position: relative;
+}
+
+#about .image::before,
+#about .image img {
+    border-radius: 0.75rem;
+    margin-top: 1rem;
+}
+
+#about .text {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    text-align: center;
+}
+
+/* =========== SERVICES ================ */
+
+.cards.grid {
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 3.652rem 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+    border-bottom: 0.25rem solid var(--base-color);
+    border-radius: .25rem .25rem 0 0;
+    text-align: center;
+}
+
+.card i {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    color: var(--base-color);
+}
+
+.card .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
 }
