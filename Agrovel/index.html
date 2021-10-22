@@ -10,15 +10,28 @@
      <!-- Icones -->
     <link rel="stylesheet" href="assets/fonts/style.css">
 
+    <!-- Swiper biblioteca-->
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+>
+
+    <!-- teste de biblioteca scroll-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- STYLES-->
     <link rel="stylesheet" href="style.css">
 
     <!-- Fontes-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" hr
+    
+    
+    ef="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet">
+
 
 </head>
 
@@ -43,7 +56,7 @@
     </header>
 
     <main>
-        <section class="section" id="home">
+        <section class="section" id="home" data-aos="fade-up">
             <div class="conteiner grid">
                 <div class="image">
                     <img src="https://images.unsplash.com/photo-1551649001-9c071b61f26c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
@@ -56,10 +69,9 @@
                 </div>
             </div>
         </section>
-
         <div class="divider-1"></div> <!-- linha que divide as sections-->
 
-        <section class="section" id="about">
+        <section class="section" id="about" data-aos="fade-up">
             <div class="conteiner grid">
                 <div class="image">
                     <img src="https://images.unsplash.com/reserve/RNm0KceQ4Gbpb0xldOe7_DSC_0679_2.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=814&q=80" alt="Bananas">
@@ -74,38 +86,120 @@
                 </div>
             </div>
         </section>
+        <div class="divider-2"></div> <!-- linha que divide as sections-->
 
-        <section class="section" id="services">
+        <section class="section" id="services" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <div class="container grid">
                 <header>
-                    <h2 class="title">Serviços</h2>
+                    <h2 class="title">Culturas</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, alias consequatur. Laudantium rem illo nam tenetur, ipsa fugit earum modi. Nisi eveniet voluptas assumenda officiis recusandae ipsum exercitationem fuga perspiciatis.</p>
                 </header>
                 <div class="cards grid">
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="icon-woman-hair"></i>
-                        <h2 class="title">Produtos</h2>
+                        <h2 class="title">Banana</h2>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio suscipit eius quis repudiandae qui magni modi. Explicabo nam delectus veniam soluta optio commodi! Aut eaque quo veniam perferendis ad at!</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="icon-trim"></i>
-                        <h3 class="title">Tratamento</h3>
+                        <h3 class="title">Manga</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum suscipit voluptatum dignissimos facere aliquam itaque possimus dolor praesentium est culpa nihil, placeat accusantium ex consequuntur enim eum sint vel aspernatur!</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                         <i class="icon-cosmetic"></i>
-                        <h3 class="title">Local</h3>
+                        <h3 class="title">Melancia</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic reiciendis asperiores voluptatem non et mollitia qui sequi laudantium in accusamus quod eos incidunt ratione quo a repellat odio, quibusdam voluptates?</p>
                     </div>
                 </div>
             </div>
+
         </section>
+        <div class="divider-1"></div> <!-- linha que divide as sections-->
+
+        <section class="section" id="testimonials" data-aos="fade-up">
+            <div class="conteiner">
+                <header>
+                    <h2 class="title">Depoimentos</h2>
+                </header>
+
+                <!-- Sliders com a biblioteca swipper-->
+                <div class="testimonials swiper">
+                    
+                    <div class="swiper-wrapper">
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt consectetur eveniet, eum vero amet quidem, obcaecati commodi numquam sapiente magni atque, debitis eius. Tempore fuga consectetur natus impedit perferendis?
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/men/26.jpg" alt="foto-fernando">
+                                    Fernando Hunji
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt consectetur eveniet, eum vero amet quidem, obcaecati commodi numquam sapiente magni atque, debitis eius. Tempore fuga consectetur natus impedit perferendis?
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Foto Willian">
+                                    Willian Batista
+                                </cite>
+                            </blockquote>
+                        </div>
+                        <div class="testimonial swiper-slide">
+                            <blockquote>
+                                <p>
+                                    <span>&ldquo;</span>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt consectetur eveniet, eum vero amet quidem, obcaecati commodi numquam sapiente magni atque, debitis eius. Tempore fuga consectetur natus impedit perferendis?
+                                </p>
+                                <cite>
+                                    <img src="https://randomuser.me/api/portraits/men/90.jpg" alt="foto-Felipe">
+                                    Felipe Yamatsu
+                                </cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-2"></div> <!-- linha que divide as sections-->
+
+        <!-- Contatos  -->
+        <section class="section" id="contact" data-aos="fade-up">
+            <div class="conteiner grid">
+                <div class="text">
+                    <h2 class="title">Entre em contato com a gente</h2>
+                    <p>Consulte sobre qualquer dúvida ou interesses</p>
+                    <a href="https://api.whatsapp.com/send?phone=+5587988350047&text=Oi, estou entrando em contato pelo site !" class="button" target="_blank"><i class="icon-whatsapp"></i>Entre em contato</a>
+                </div>
+                <div class="links">
+                    <ul class="grid">
+                        <li><i class="icon-phone"></i>(87) 999429524</li>
+                        <li><i class="icon-mail"></i>agrovel@gmail.com</li>
+                        <li><i class="icon-instagram"></i>@agrovel_</li>
+                        <li><i class="icon-map-pin"></i>Juazeiro Salitre</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </main>
 
      <footer>
 
     </footer>
 
+
+    <!--scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
 
 </body>
