@@ -289,8 +289,8 @@ nav.show .icon-close {
 }
 
 #home .image img {
-    width: 14rem;
-    right: -4.5rem;
+    width: 49%;
+    right: -20%;
     position: relative;
 }
 
@@ -341,7 +341,7 @@ nav.show .icon-close {
 }
 
 #about .image img {
-    width: 24rem;
+    width: 85%;
     right: 0rem;
     position: relative;
 }
@@ -378,7 +378,7 @@ nav.show .icon-close {
 .card i {
     display: block;
     margin-bottom: 1.5rem;
-    font-size: 5rem;
+    font-size: 6rem;
     color: var(--base-color);
 }
 
@@ -465,4 +465,92 @@ nav.show .icon-close {
 
 #contact ul li i{
     color: var(--base-color);
+}
+
+/* ================== footer =================*/
+
+footer {
+    background: var(--base-color);
+}
+
+.logo-alt {
+    display: inline-flex;
+    font: 700 1.31rem 'Poppins', sans-serif;
+    margin-bottom: 1.5rem;
+
+}
+
+.logo-alt span {
+    color: var(--body-color);
+}
+
+footer .brand p {
+    color: var(--body-color);
+    margin-bottom: 0.75rem;
+}
+
+footer i {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+footer .social {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .social a {
+    transition: 0.3s;
+    display: inline-block;
+}
+footer .social a:hover {
+    transform: translateY(-12px);
+}
+
+
+footer .social i {
+    font-size: 1.5rem;
+    color: var(--body-color);
+}
+
+.back-to-top {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+
+    padding: 0.5rem;
+    clip-path: circle();
+    font-size: 1.5rem;
+    
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* RESPONSIVO */
+
+
+/* ============MEDIA QUERIES========== */
+/* Extra large devices: 1200 > * */ 
+/* Large devices: 1023 > * */
+/* large devices: 992 > * */
+@media (min-width:992px) {
+
+}
+
+/* Medium devices: 764 > * */
+
+
+@media () {
+
+
 }

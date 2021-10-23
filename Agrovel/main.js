@@ -20,10 +20,10 @@ for(const link of links) {
 
 /** Quando o usuario scrollar a pagina */
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
-
-window.addEventListener('scroll', function() {
+function ChangeHeader() {
+    const header = document.querySelector('#header')
+    const navHeight = header.offsetHeight
+   
     if(window.scrollY >= navHeight) {
         // Scroll é maior que a altura do header
         header.classList.add('scroll')
@@ -31,6 +31,24 @@ window.addEventListener('scroll', function() {
         // Scroll é menor que a altura do header
         header.classList.remove('scroll')
     }
+}
+
+/**  Botão voltar para o topo */
+
+  function BackToTop() {
+    const backToTopButton = document.querySelector('.back-to-top')
+    if(window.scrollY >= 3300 ){
+        backToTopButton.classList.add('show')
+
+    }else {
+        backToTopButton.classList.remove('show')
+    }
+  }
+
+
+window.addEventListener('scroll', function() {
+    ChangeHeader()
+    BackToTop()
 })
 
 
@@ -47,5 +65,8 @@ const swiper = new Swiper('.swiper', {
     Keyboard: true
   });
   
+
+
+  /** Animação ao scrollar o site */
 
   AOS.init();
