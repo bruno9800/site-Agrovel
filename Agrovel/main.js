@@ -2,6 +2,17 @@
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')
 
+
+
+/* add atributo data-aos em todas as tags dentro da main */
+const all = document.querySelectorAll('main>*')
+
+for( let i=0, max = all.length; i<max; i++) {
+    all[i].setAttribute("data-aos", "fade-up")
+}
+
+/* fim dessa parte */
+
 for(const element of toggle) {
     element.addEventListener('click', function () {
         nav.classList.toggle('show')
@@ -62,7 +73,13 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination'
     },
     mousewheel: true,
-    Keyboard: true
+    Keyboard: true,
+    breakpoints: {
+        767: {
+            slidesPerView: 2,
+            setWrapperSize: true
+        }
+    }
   });
   
 
@@ -70,3 +87,44 @@ const swiper = new Swiper('.swiper', {
   /** Animação ao scrollar o site */
 
   AOS.init();
+
+
+/* Indentificar qual item do menu que a pagina está e informar com CSS */
+/* tentativa ==========>
+const sections = document.querySelectorAll('main section[id]') 
+
+function ActivateMenuAtCurrentSection() {
+
+    const checkpoint = scrollY
+
+    if(checkpoint < 670 ){
+        console.log('menu')
+    }else if(checkpoint < 1360) {
+        console.log("sobre")
+    }else if(checkpoint < 2230) {
+        console.log("Culturas")
+    }else if(checkpoint < 3040) {
+        console.log("depoimentos")
+    }else
+    console.log("contatos")
+
+}
+
+addEventListener('scroll', ActivateMenuAtCurrentSection)
+
+*/
+
+const sections = document.querySelectorAll('main section[id]')
+
+function ActivateMenuAtCurrentSection() {
+    const checkpoint = window.pageYOffset + (window.innerHeight/8) * 4
+
+    for (const section of sections) {
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.offsetHeight
+        const sectionId = section.getAttribute('id')
+
+        const cehckpointStart = checkpoint >= sectionTop
+        
+    }
+}
