@@ -57,12 +57,6 @@ function ChangeHeader() {
   }
 
 
-window.addEventListener('scroll', function() {
-    ChangeHeader()
-    BackToTop()
-})
-
-
 /* Testimonials Slider */
 
 
@@ -124,7 +118,27 @@ function ActivateMenuAtCurrentSection() {
         const sectionHeight = section.offsetHeight
         const sectionId = section.getAttribute('id')
 
-        const cehckpointStart = checkpoint >= sectionTop
-        
+        const checkpointStart = checkpoint >= sectionTop
+        const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+        if (checkpointStart && checkpointEnd ) {
+            document.
+            querySelector('nav ul li a[href*=' + sectionId + ']')
+            .classList.add('active')
+            console.log('oi')
+
+        }else {
+            document.
+            querySelector('nav ul li a[href*=' + sectionId + ']')
+            .classList.remove('active')
+            console.log('alo')
+        }
     }
 }
+
+
+window.addEventListener('scroll', function() {
+    ChangeHeader()
+    BackToTop()
+    ActivateMenuAtCurrentSection()
+})

@@ -121,7 +121,7 @@ main {
     font-size: var(--subtitle-font-size);
 }
 
-.section headder {
+.section header {
     margin-bottom: 4rem;
 }
 
@@ -182,7 +182,8 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--base-color);
 }
 
@@ -198,7 +199,8 @@ nav ul li a::after {
 
     transition: width 0.3s;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::After {
     width: 100%;
 
 }
@@ -602,8 +604,14 @@ footer .social i {
         gap: 2rem;
     }
     nav .menu ul .title {
-        font-size: 1rem;
+        font: 400 1rem 'Poppins', sans-serif;
     }
+
+    nav .menu ul li a.title.active {
+        font-weight: bold;
+        -webkit-font-smoothing: auto;
+    }
+
 
     nav .icon-menu {
         display: none;
