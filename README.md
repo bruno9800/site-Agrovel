@@ -4,21 +4,19 @@
 
 
 <h2>Tecnologias</h2>
-##
+ ##
     <ul>
         <li>HTML5</li>
         <li>CSS3</li>
         <li>JavaScript</li>
     </ul>
 
-    <hr>
 <h3>Bibliotecas</h3>
     <ul>
         <li>Fontes do Google</li>
         <li>SwipeJS</li>
         <li>AOS.js - Rolagem de página</li>
     </ul>
-<hr>
 
 <h3>Ultitários</h3>
     <ul>
