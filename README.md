@@ -1,4 +1,4 @@
-<h1>Site Agrovel - <a href="https://bruno9800.github.io/site-Agrovel/" target="_blank">acesse</a> </h1>
+<h1>Site Agrovel - <a href="https://bruno9800.github.io/site-agrovel/" target="_blank">acesse</a> </h1>
 
 <p>Projeto desenvolvido a partir das aulas do NLW together - Origin</p>
 
